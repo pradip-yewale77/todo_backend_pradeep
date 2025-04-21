@@ -1,0 +1,21 @@
+{
+  "name": "pradeep_backend-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pradip-yewale77/todoprojectbackend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pradip-yewale77/todoprojectbackend/issues"
+  },
+  "homepage": "https://github.com/pradip-yewale77/todoprojectbackend#readme"
+}
