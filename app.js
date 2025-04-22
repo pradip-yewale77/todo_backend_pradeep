@@ -9,7 +9,7 @@ const list = require("./routes/list.js");    // List routes
 
 // Enable CORS (restrict to specific origins if needed)
 const corsOptions = {
-  origin: ['http://localhost:3000'], // Add frontend domain(s) here
+  origin: ['https://jovial-moxie-f5e774.netlify.app/'], // Add frontend domain(s) here
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 };
