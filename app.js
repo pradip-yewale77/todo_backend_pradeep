@@ -1,5 +1,4 @@
 const express = require("express");
-const app = express();
 const cors = require("cors");
 require("dotenv").config(); // Load .env variables
 
@@ -7,9 +6,11 @@ const connectDB = require("./conn/conn.js"); // MongoDB connection
 const auth = require("./routes/auth.js");    // Auth routes
 const list = require("./routes/list.js");    // List routes
 
-// Enable CORS (restrict to specific origins if needed)
+const app = express();
+
+// ✅ Proper CORS setup (NO trailing slash)
 const corsOptions = {
-  origin: ['https://jovial-moxie-f5e774.netlify.app/'], // Add frontend domain(s) here
+  origin: ['https://jovial-moxie-f5e774.netlify.app'], // Your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 };
@@ -30,6 +31,7 @@ app.use("/api/v1", auth);
 app.use("/api/v1", list);
 
 // Start server
-app.listen(1000, () => {
-  console.log("Server started on port 1000");
+const PORT = process.env.PORT || 1000;
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
 });
